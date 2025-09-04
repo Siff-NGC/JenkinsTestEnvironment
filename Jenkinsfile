@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Test for rdy'
+                echo 'Test for rdy2'
             }
         }
         stage('Deploy') {
