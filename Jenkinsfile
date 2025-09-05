@@ -14,7 +14,9 @@ pipeline {
         }
         stage('Test') {
             steps {
-                ls
+				script{
+					ls
+				}
             }
         }
         stage('Deploy') {
