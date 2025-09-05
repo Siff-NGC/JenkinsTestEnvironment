@@ -4,7 +4,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Clone') {
             steps {
 				script {
 					echo 'Fetching code.'
@@ -12,10 +12,17 @@ pipeline {
 				}
             }
         }
-        stage('Test') {
+        stage('Build') {
             steps {
 				script{
-					ls
+					echo 'Building code.'
+				}
+            }
+        }
+		stage('Test') {
+            steps {
+				script{
+					echo 'Testing code.'
 				}
             }
         }
