@@ -6,12 +6,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Fetching code.'
+				git clone https://github.com/Siff-NGC/JenkinsTestEnvironment.git
             }
         }
         stage('Test') {
             steps {
-                echo 'Test for rdy3'
+                ls
             }
         }
         stage('Deploy') {
