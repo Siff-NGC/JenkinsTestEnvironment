@@ -6,8 +6,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Fetching code.'
-				git clone 'https://github.com/Siff-NGC/JenkinsTestEnvironment.git'
+				script {
+					echo 'Fetching code.'
+					git clone 'https://github.com/Siff-NGC/JenkinsTestEnvironment.git'
+				}
             }
         }
         stage('Test') {
