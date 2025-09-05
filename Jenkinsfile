@@ -8,7 +8,7 @@ pipeline {
             steps {
 				script {
 					echo 'Fetching code.'
-					git branch: "Ready/git", url: "https://github.com/Siff-NGC/JenkinsTestEnvironment.git"
+					git branch: "$BRANCH_NAME", url: "https://github.com/Siff-NGC/JenkinsTestEnvironment.git"
 				}
             }
         }
