@@ -37,7 +37,7 @@ pipeline {
 				sh "git add ."
 				sh "git commit -m '$BUILD_NUMBER'"
 //				sh "git push origin $BRANCH_NAME:Master"
-				sh "git push origin Master"
+				sh "git push origin HEAD:Master"
 			}
         }
     }
