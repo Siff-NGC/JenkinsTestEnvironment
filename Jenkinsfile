@@ -36,12 +36,8 @@ pipeline {
 				sh "echo Version: $BUILD_NUMBER > version.txt"
 				sh "git add ."
 				sh "git commit -m '$BUILD_NUMBER'"
-				sh "git checkout Master"
-				sh "git merge $BRANCH_NAME"
-//				sh "git add ."
-//				sh "git commit -m 'Merged $BRANCH_NAME'"
-				sh "git push origin Matser:Master"
 //				sh "git push origin $BRANCH_NAME:Master"
+				sh "git push origin Master"
 			}
         }
     }
