@@ -33,7 +33,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying binaries.'
-				echo 'Version: $BUILD_NUMBER > version.txt'
+				sh "echo Version: $BUILD_NUMBER > version.txt"
 //				sh "cat version: $BUILD_NUMBER > version.txt"
 //				sh "git add ."
 //				sh "git commit -m 'Message'"
