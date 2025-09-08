@@ -40,7 +40,7 @@ pipeline {
 				sh "git merge $BRANCH_NAME"
 //				sh "git add ."
 //				sh "git commit -m 'Merged $BRANCH_NAME'"
-				sh "git push origin Master"
+				sh "git push origin Matser:Master"
 //				sh "git push origin $BRANCH_NAME:Master"
 			}
         }
