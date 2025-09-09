@@ -26,6 +26,7 @@ pipeline {
             steps {
 				script{
 					echo 'Testing code.'
+					bat 'msbuild right-first-time.sln /p:Configuration=Release %MSBUILD_ARGS%'
 				}
             }
         }
