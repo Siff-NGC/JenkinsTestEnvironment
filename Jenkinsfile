@@ -26,7 +26,8 @@ pipeline {
             steps {
 				script{
 					echo 'Testing code.'
-					bat "\"${tool 'VS2022'}\\msbuild\" Sample-Test1/Sample-Test1.sln /p:Configuration=Debug %MSBUILD_ARGS%"
+					//bat "\"${tool 'VS2022'}\\msbuild\" Sample-Test1/Sample-Test1.sln /p:Configuration=Debug %MSBUILD_ARGS%"
+					bat "\"${tool 'VS2022'}\\msbuild\" Sample-Test1/Sample-Test1.sln /p:Configuration=Debug"
 				}
             }
         }
