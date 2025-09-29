@@ -4,15 +4,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
-            steps {
-				script {
-					echo 'Fetching code.'
-					//git branch: "$BRANCH_NAME", url: "https://github.com/Siff-NGC/JenkinsTestEnvironment.git"
-					checkout scmGit(branches: [[name: '**']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Siff-NGC/JenkinsTestEnvironment.git']])
-				}
-            }
-        }
+        
 		
         stage('Build') {
             steps {
@@ -41,4 +33,5 @@ pipeline {
 			}
         }
     }
+
 }
